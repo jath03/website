@@ -8,6 +8,7 @@ export const GET: RequestHandler = ({ request, platform }) => {
 
     return new Response(`{
         "message": "hi",
-        "platform": ${JSON.stringify(platform)}
+        "platform": ${JSON.stringify(platform)},
+        "keys": "${platform.env.PROJECTS['keys']}"
     }`);
 }
