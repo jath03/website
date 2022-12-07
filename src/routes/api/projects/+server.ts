@@ -9,6 +9,6 @@ export const GET: RequestHandler = ({ request, platform }) => {
     return new Response(`{
         "message": "hi",
         "platform": ${JSON.stringify(platform)},
-        "keys": "${platform.env.PROJECTS['keys']}"
+        "keys": "${platform.env.PROJECTS.idFromName("keys")}"
     }`);
 }
