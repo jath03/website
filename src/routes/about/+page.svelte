@@ -10,7 +10,7 @@
 			class="text-base text-sky-600 font-bold underline hover:text-black"
 			href="/projects">projects</a
 		>
-		that I've done. If you want to know more, here's my
+		that I've done. If you like what you see, here's my
 		<a
 			class="text-base text-sky-600 font-bold underline hover:text-black"
 			href="/resume.pdf"
