@@ -1,14 +1,14 @@
-// import type { Project } from '@playwright/test';
 import type { RequestHandler } from './$types';
 import type ProjectItem from '$lib/projectItem';
 
-export const GET: RequestHandler = ({ request, platform }) => {
-    console.log("Request: ", request);
-    console.log("Platform: ", platform);
+const KEY = "projects";
 
-    return new Response(`{
-        "message": "hi",
-        "platform": ${JSON.stringify(platform)},
-        "keys": "${platform.env.PROJECTS['keys']}"
-    }`);
+export const GET: RequestHandler = async ({ platform }) => {
+    let projects: Array<ProjectItem> | null = await platform.env.projects_portfolio.get(KEY);
+    if (projects == null) {
+        await platform.env.projects_portfolio.put(KEY, `[]`);
+        projects = await platform.env.projects_portfolio.get(KEY);
+    }
+
+    return new Response(`{ "projects": ${JSON.stringify(projects)} }`, { headers: { 'access-control-allow-origin': '*' } });
 }

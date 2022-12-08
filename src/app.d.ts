@@ -7,7 +7,7 @@ declare namespace App {
     // interface Error {}
     interface Platform {
         env: {
-            PROJECTS;
+            projects_portfolio: KVNamespace;
         };
         context: {
             waitUntil(promise: Promise<any>): void;
