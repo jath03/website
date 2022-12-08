@@ -17,11 +17,11 @@
 				</div>
 				{#if i % 2 == 0}
 					<div class="p-6">
-						<img class="mx-auto" src={project.image} alt={project.name} />
+						<img class="mx-auto max-w-full" src={project.image} alt={project.name} />
 					</div>
 				{:else}
 					<div class="p-6 order-first">
-						<img class="mx-auto" src={project.image} alt={project.name} />
+						<img class="mx-auto max-w-full" src={project.image} alt={project.name} />
 					</div>
 				{/if}
 			</div>
