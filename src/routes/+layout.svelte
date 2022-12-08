@@ -10,7 +10,7 @@
 			<div class="flex justify-start">
 				<a href="/">
 					<span class="sr-only">Jack Hughes</span>
-					<h1 class="text-base text-5xl px-4 font-mono text-sky-600">J</h1>
+					<h1 class="text-base text-6xl px-4 font-mono text-sky-600">J</h1>
 				</a>
 			</div>
 
@@ -20,6 +20,22 @@
 					>Projects</a
 				>
 			</nav>
+
+			<div class="flex grow items-center max-md:hidden justify-end shrink-0 gap-2">
+				<a href="https://github.com/jath03">
+					<img class="w-12" src="/github.png" alt="" />
+				</a>
+				<a href="https://gitlab.com/jath03">
+					<img
+						class="w-20"
+						src="https://about.gitlab.com/images/press/logo/svg/gitlab-logo-500.svg"
+						alt=""
+					/>
+				</a>
+				<a href="https://www.linkedin.com/in/jack-hughes-maker/">
+					<img class="w-11" src="/linkedin.png" alt="" />
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
