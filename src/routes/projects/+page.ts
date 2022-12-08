@@ -11,7 +11,7 @@ export const load: PageLoad = async ({ fetch }) => {
         return { projects: projects };
     } else {
         console.error(res.statusText);
-        console.error(res.text());
+        console.error(await res.text());
         return { projects: [] };
     }
 }
