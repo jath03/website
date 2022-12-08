@@ -4,7 +4,7 @@ import type ProjectItem from '$lib/projectItem';
 
 export const GET: RequestHandler = async ({ platform }) => {
     let projects: Array<ProjectItem> = await platform.env.projects_portfolio.get("projects");
-    if (!projects) {
+    if (projects == null) {
         await platform.env.projects_portfolio.put("projects", `[]`);
         projects = await platform.env.projects_portfolio.get("projects");
     }
