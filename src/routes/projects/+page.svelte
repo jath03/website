@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import Markdown from '$lib/markdown.svelte';
 
 	export let data: PageData;
 </script>
@@ -10,10 +11,10 @@
 	{#each data.projects as project, i}
 		{#if project.image}
 			<div class="lg:grid lg:grid-cols-2 gap-6 py-6 rounded-2xl bg-gray-200">
-				<div class="p-6">
-					<h3 class="text-base text-2xl font-bold text-center">{project.name}</h3>
-					<p class="text-base text-center text-gray-500">{project.short_description}</p>
-					<p class="text-base text-center">{project.long_description}</p>
+				<div class="p-6 text-base text-center">
+					<h3 class="text-2xl font-bold">{project.name}</h3>
+					<p class="text-gray-500">{project.short_description}</p>
+					<Markdown content={project.long_description} />
 				</div>
 				{#if i % 2 == 0}
 					<div class="p-6">
@@ -27,10 +28,10 @@
 			</div>
 		{:else}
 			<div class="py-6 rounded-2xl bg-gray-200">
-				<div class="p-6">
-					<h3 class="text-base text-2xl font-bold text-center">{project.name}</h3>
-					<p class="text-base text-center text-gray-500">{project.short_description}</p>
-					<p class="text-base text-center">{project.long_description}</p>
+				<div class="p-6 text-base text-center">
+					<h3 class="text-2xl font-bold">{project.name}</h3>
+					<p class="text-gray-500">{project.short_description}</p>
+					<Markdown content={project.long_description} />
 				</div>
 			</div>
 		{/if}
