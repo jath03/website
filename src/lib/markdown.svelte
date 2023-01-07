@@ -4,4 +4,4 @@
 	export let content: string;
 </script>
 
-<SvelteMarkdown source={content} renderers={{ link: BasicLink }} />
+<SvelteMarkdown source={content} renderers={{ link: BasicLink }} isInline />
