@@ -7,7 +7,7 @@
 <div class="max-w-3xl mx-auto">
 	<img src="/selfie.jpg" alt="Me" class="max-w-xs max-md:mx-auto md:float-right px-4" />
 	<p class="p-4">
-		Hi! My name is Jack Hughes. I'm currently a Sophomore attending the University of Arizona and
+		Hi! My name is Jack Hughes. I'm currently a Junior attending the University of Arizona and
 		majoring in Software Engineering. I have been interested in technology and software for a long
 		time and have messed around everything from robotics to web development and much more. I'm also
 		a long-time linux user (I use arch btw) and believe in the value of open source software. Check
