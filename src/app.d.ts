@@ -7,11 +7,11 @@ declare namespace App {
 	// interface Error {}
 	interface Platform {
 		env: {
-			PROJECTS: projects_portfolio;
+			projects_portfolio: KVNamespace;
 		};
-		// context: {
-		// 	waitUntil(promise: Promise<any>): void;
-		// };
-		// caches: CacheStorage & { default: Cache }
+		context: {
+			waitUntil(promise: Promise<any>): void;
+		};
+		caches: CacheStorage & { default: Cache };
 	}
 }
